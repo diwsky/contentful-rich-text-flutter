@@ -72,8 +72,8 @@ class ContentfulRichText {
     BLOCKS.HR.value: (node, next) => Hr(),
     INLINES.ASSET_HYPERLINK.value: (node, next) =>
         _defaultInline(INLINES.ASSET_HYPERLINK, node as Inline),
-    INLINES.ENTRY_HYPERLINK.value: (node, next) =>
-        _defaultInline(INLINES.ENTRY_HYPERLINK, node as Inline),
+    // INLINES.ENTRY_HYPERLINK.value: (node, next) =>
+    //     _defaultInline(INLINES.ENTRY_HYPERLINK, node as Inline),
     INLINES.EMBEDDED_ENTRY.value: (node, next) =>
         _defaultInline(INLINES.EMBEDDED_ENTRY, node as Inline),
     INLINES.HYPERLINK.value: (node, next) => Hyperlink(node, next),
