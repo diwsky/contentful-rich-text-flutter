@@ -183,13 +183,9 @@ class ContentfulRichText {
     }
 
     // for links to entries only process the child-nodes
-    // if (node['nodeType'] == 'entry-hyperlink') {
-    //   return TextSpan(
-    //     children: (node['content'] ?? '')
-    //         .map<TextSpan>((subNode) => _processInlineNode(subNode) as TextSpan)
-    //         .toList(),
-    //   );
-    // }
+    if (node['nodeType'] == 'entry-hyperlink') {
+      return singletonRenderers.renderNode[node['nodeType']]!;
+    }
 
     // If not a hyperlink, process as text node
     TextNode textNode = TextNode(node);
